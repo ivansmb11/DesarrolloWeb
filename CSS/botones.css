@@ -41,13 +41,27 @@ div {
     font-size: 20px;
     padding: 25px 30px;
 }
+
+.negrita {
+    font-weight: bold;
+}
 /* clases para los colores */
 .negro {background: #000;}
-.amarillo {background: #FACC2E;}
+.amarillo {background: #f7fa2e;}
 .cyan { background: #00FFFF; }
 .rosa { background: #FA58F4; }
 .lila { background: #BCA9F5; }
+.blue { background: blue} /*nuevo*/
 /* Efectos */
 .redondo {
     border-radius: 100px;
 }
+
+/*Margenes: son los que separan a nuestro objeto de su límite o lienzo.
+Padding: es la separación que hacemos dentro de un objeto a la hora de tener nuestro contenido DENTRO.
+Background: es el color/imagen que rodea nuestro objeto.
+Display: es el tipo de "caja" en la que se genera el elemento.
+
+Exploré con la clase redondo, y me dí cuenta que no cambiaba mucho si aumentaba o disminuía el tamaño del border-radius.
+Jugué con los padding/margins y aprendí a darle formato a estos elementos.
+*/
