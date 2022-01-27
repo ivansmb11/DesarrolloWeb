@@ -1,0 +1,18 @@
+/*div > p {
+    font-size: 20px;
+    color: blue;
+} */
+
+/* input[type]{} */
+
+/* input[type="text"]{} */
+
+body {
+    font-size: 32px;
+    color: red;
+}
+
+article {
+    font-size: 18px;
+    color: green;
+}

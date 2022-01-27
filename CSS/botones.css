@@ -1,0 +1,46 @@
+body {
+    background: #f2f2f2;
+    font-family: Arial, Sans-serif;
+}
+div {
+    margin: 20px 0;
+}
+.boton {
+    color: #fff;
+    background: #32021f;
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 20px;
+    text-decoration: none;
+    margin:0 10px ;
+}
+.boton:hover {
+    opacity: .3;
+}
+/* clases para los tamaños */
+.small {
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.medium {
+    font-size: 16px;
+    padding: 15px 20px;
+}
+.big {
+    font-size: 18px;
+    padding: 20px 25px;
+}
+.extra-big {
+    font-size: 20px;
+    padding: 25px 30px;
+}
+/* clases para los colores */
+.negro {background: #000;}
+.amarillo {background: #FACC2E;}
+.cyan { background: #00FFFF; }
+.rosa { background: #FA58F4; }
+.lila { background: #BCA9F5; }
+/* Efectos */
+.redondo {
+    border-radius: 100px;
+}

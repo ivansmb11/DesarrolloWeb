@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 22px;
+}
+
+.caja {
+    background: #0353a4;
+    width: 200px;
+    height: 200px;
+    margin: 20px 40px 30px 0px;
+    padding: 20px;
+}
+
+.caja2 {
+    background: #A5DF00;
+    width: 200px;
+    /* height: 200px; */
+}
+
+p {
+    background: pink;
+}

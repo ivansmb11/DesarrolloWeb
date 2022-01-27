@@ -1,0 +1,16 @@
+div p {
+    font-size: 20px;
+    color: green;
+}
+
+.grande{
+    font-size: 28px;
+}
+
+.rojo{
+    color: red;
+}
+
+ p a {
+     color: pink;
+ }
