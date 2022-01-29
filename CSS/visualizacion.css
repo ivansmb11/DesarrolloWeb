@@ -1,4 +1,23 @@
 *body{
     font-family: Arial, sans-serif;
-    
+    background: #F2F2F2;
+}
+
+div, a {
+    background: rgba(204, 204, 204, 0.568);
+}
+
+a {
+    /*display: none;
+    visibility: hidden;*/
+}
+
+.caja {
+    color: #fff;
+    font-family: Helvetica;
+    background: #da1111;
+    margin: 20px 0;
+    width: 200px;
+    height: 150px;
+    overflow: auto;
 }
