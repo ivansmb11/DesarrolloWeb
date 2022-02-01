@@ -1,0 +1,18 @@
+body {
+    background: red;
+}
+
+.galeria {
+    width: 100%;
+}
+
+.galeria img{
+    width: 400px;
+    vertical-align: top;
+    margin: 20px;
+    padding: 10px;
+}
+
+.galeria img:hover{
+    border: 2px solid white;
+}
