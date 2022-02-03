@@ -1,0 +1,41 @@
+body {
+    background: url('../IMG/FONDO.jpg');
+    background-size: 1920px;
+}
+
+
+.boton {
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    background: blue;
+    text-align: center;
+}
+
+.linkF {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: white;
+}
+
+body .boton:hover{
+    border: 3px solid white;
+}
+
+.Bloque {
+    background: rgba(9, 153, 236, 0.479);
+    height: 50px;
+    margin: 10px;
+}
+
+.Bloque p{
+    text-decoration: underline;
+}
+
+.galeria img{
+    width: 400px;
+    vertical-align: top;
+    align-items: baseline;
+    margin: 20px;
+    padding: 10px;
+}
