@@ -40,3 +40,15 @@ body {
     min-width: 100%;
     max-width: 100%;
 }
+
+.formulario input[type="submit"]{
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #226fc1;
+    color: #4fb599;
+    background: none;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+}
