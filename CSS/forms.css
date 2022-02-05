@@ -22,10 +22,21 @@ body {
 
 }
 
-.formulario input[type="text"] {
-    
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid #226fc1;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 16px;
 }
 
-.formulario input[type="email"] {
-    
+.formulario textarea{
+    min-height: 120px;
+    max-height: 300px;
+    min-width: 100%;
+    max-width: 100%;
 }
