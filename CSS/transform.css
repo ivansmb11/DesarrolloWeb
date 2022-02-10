@@ -1,7 +1,7 @@
 .caja {
     width: 200px;
     height: 200px;
-    transform: rotate(10deg);
+    transform: rotate(0deg);
     background: #21295c;
     transition: background 3s ease;
     transition-delay: 5s;

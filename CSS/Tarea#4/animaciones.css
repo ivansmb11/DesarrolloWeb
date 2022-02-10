@@ -7,6 +7,7 @@
 }
 
 @keyframes movimiento {
+    /* efecto transform */
     from{transform: translate(0px);}
     to{transform: translate(500px);}
 }
@@ -15,7 +16,16 @@
     width: 200px;
     height: 200px;
     background: #9eb3c2;
+    /* efecto animation */
     animation-name: papel;
     animation-duration: 5s;
-    /*animation-iteration-count: infinite;*/
+    /* efecto transition */
+    transition: width 2s;
+    transition: background 1s;
+}
+
+/* se le da un evento al efecto transition */
+.caja:hover {
+    width: 700px;
+    background: red;
 }
