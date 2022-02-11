@@ -121,6 +121,41 @@ footer {
     padding: 15px 0;
 }
 
+/* Acerca de CSS */
+
+.main2 {
+    width: 70%;
+    float: left;
+    background: url(./IMG/sala.jpg);
+    background-size: 105%;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-weight:bolder;
+    /* background: #4242421a; */
+}
+
+.main2 .todoAcercaDe {
+    padding: 40px;
+}
+
+.main2 .todoAcercaDe article h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bolder;
+    background: #4242427a;
+    padding: 6px;
+    border-radius: 5px;
+
+}
+
+.main2 .todoAcercaDe article p {
+    margin-bottom: 15px;
+    line-height: 25px;
+    background: #4242427a;
+    padding: 6px;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 800px) {
 
     .main {
