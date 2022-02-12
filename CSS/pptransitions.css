@@ -1,0 +1,11 @@
+.caja a {
+    text-decoration: none;
+    font-size: 60px;
+    color: rgb(0,0,255);
+}
+.caja a:hover {
+    color: rgb(255,0,0);
+}
+.caja a {
+    transition: color 0.8s linear 0.2s;
+}
