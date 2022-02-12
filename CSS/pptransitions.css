@@ -7,5 +7,9 @@
     color: rgb(255,0,0);
 }
 .caja a {
-    transition: color 0.8s linear 0.2s;
+    transition: color 1.5s ease 0.2s;
+    /* transition-property: color;
+    transition-duration: 1.5s;
+    transition-timing-function: ease;
+    transition-delay: 0.2; */
 }
