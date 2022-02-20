@@ -58,20 +58,18 @@ const findByID = query => {
           ]
         }
     }
-
-    var idQ = parseInt(document.getElementById('queryID').value);
-
-    var query = parseInt(document.getElementById('queryID').value);
     
     const user = users[query];
 
-    if (user.id == idQ) {
-      document.getElementById('nombreT').value=user.name;
-      document.getElementById('generoT').value=user.gender;
+    console.log(user);
+    // console.log(query);
+    console.log(user.id);
+
+    if (user.id == query) {
+        console.log('Se encontró el id ',user.id,' con el nombre ',user.name);
 
     } else {
-      document.getElementById('nombreT').value='No hay nada en la DB';
-      document.getElementById('generoT').value='No hay nada en la DB';
+      console.log('No se encontró nada en la DB');
     }
   
 }

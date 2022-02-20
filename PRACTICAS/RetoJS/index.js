@@ -67,8 +67,9 @@ const findByID = query => {
 
 }
 
-findByID(1500);
+findByID(1800);
 findByID(3);
+console.log(users);
 
 // for (let index = 1438; index <= 1834; index++) {
 //   ids[index] = index;
