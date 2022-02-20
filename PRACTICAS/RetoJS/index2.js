@@ -45,6 +45,8 @@ const genders = [
 
 const findByID = query => {
 
+    document.getElementById('Nombre').value='';
+
     for (let index = 1438; index <= 1834; index++) {
         users[index] = {
           id: index,
@@ -55,16 +57,20 @@ const findByID = query => {
             Math.floor(Math.random() * 18)
           ]
         }
-      }
+    }
+
+    var idQ = parseInt(document.getElementById('queryID').value);
 
     // var query = parseInt(document.getElementById('queryID').value);
     
     const user = users[query];
   
-    if (user) {
-        document.getElementById('Nombre').value=users[query];
+    if (user.id == idQ) {
+        document.getElementById('nombreT').value=user.names;
+        document.getElementById('generoT').value=user.genders;
+
     } else {
-        document.getElementById('Nombre').value='No hay nada en la DB';
+        document.getElementById('nombreT').value='No hay nada en la DB';
     }
   
   }
