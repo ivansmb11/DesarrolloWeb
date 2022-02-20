@@ -64,13 +64,16 @@ const findByID = query => {
     // var query = parseInt(document.getElementById('queryID').value);
     
     const user = users[query];
-  
-    if (user.id == idQ) {
-        document.getElementById('nombreT').value=user.names;
-        document.getElementById('generoT').value=user.genders;
 
-    } else {
-        document.getElementById('nombreT').value='No hay nada en la DB';
-    }
+    if ()
+
+    // if (user.index == idQ) {
+    //     document.getElementById('nombreT').value=user.names;
+    //     document.getElementById('generoT').value=user.genders;
+
+    // } else {
+    //     document.getElementById('nombreT').value='No hay nada en la DB';
+    //     document.getElementById('generoT').value='No hay nada en la DB';
+    // }
   
   }
