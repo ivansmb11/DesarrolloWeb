@@ -60,20 +60,16 @@ const findByID = query => {
     }
 
     var idQ = parseInt(document.getElementById('queryID').value);
-
-    var query = parseInt(document.getElementById('queryID').value);
     
-    const user = users[query];
+    const user = users[idQ];
 
     if (user.id == idQ) {
       document.getElementById('nombreT').value=user.name;
       document.getElementById('generoT').value=user.gender;
 
     } else {
-      document.getElementById('nombreT').value='No hay nada en la DB';
-      document.getElementById('generoT').value='No hay nada en la DB';
+      document.getElementById('nombreT').value='';
+      document.getElementById('generoT').value='';
     }
   
 }
-
-findByID(1500);
