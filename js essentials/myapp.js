@@ -21,4 +21,4 @@ const myFunction = n1 => {
 
 }
 
-myFunction(3);
+myFunction( 3 );
