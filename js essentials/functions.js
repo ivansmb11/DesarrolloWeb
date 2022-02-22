@@ -8,7 +8,7 @@ const makeCoffee = (sugar,milk) => {
     
     instructions += " add " + sugar + " spoons of sugar,";
     
-    instructions += " add " + milk + "% milk.";
+    instructions += " add " + "milk" + "% milk.";
 
     return instructions;
 }
