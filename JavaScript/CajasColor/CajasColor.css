@@ -2,7 +2,7 @@
     width: 200px;
     height: 200px;
     cursor: pointer;
-    background: #226fc1;
+    background: #15973c;
     margin: 10px;
     display: inline-block;
     text-align: center;
@@ -13,6 +13,9 @@
 }
 
 .negro {
-    background: #000;
+    background: rgb(0, 0, 0);
+}
 
+.tamaño {
+    width: 300px;
 }
