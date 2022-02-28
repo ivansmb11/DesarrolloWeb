@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(187, 187, 187);
+}
+
+.title {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.contenedor {
+    width: 350px;
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 20px;
+    padding-top: 16px;
+    padding-left: 15px;
+}
+
+input,
+        select {
+            width: 80%;
+            border: none;
+            border-bottom: 1px solid #0074D9;
+            padding: 10px;
+        }
+         
+        input:focus,
+        select:focus {
+            border: 1px solid #0074D9;
+            outline: none;
+        }
+         
+        select {
+            width: 88% !important;
+        }
+
+form {
+    text-align: center;
+    font-size: 18px;
+    width: 320px;
+}

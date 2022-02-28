@@ -1,0 +1,181 @@
+<html>
+ 
+<head>
+    <style>
+        body {
+            background-color: #001f4f;
+            font-family: 'Raleway', sans-serif;
+        }
+         
+        .container {
+            width: 350px;
+            height: 500px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 20px;
+        }
+         
+        h1 {
+            position: absolute;
+            left: 50%;
+            top: -60px;
+            width: 300px;
+            transform: translateX(-50%);
+            background-color: #FF851B;
+            color: #fff;
+            font-weight: 100;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px;
+        }
+         
+        .wrapper {
+            padding: 20px;
+        }
+         
+        input,
+        select {
+            width: 80%;
+            border: none;
+            border-bottom: 1px solid #0074D9;
+            padding: 10px;
+        }
+         
+        input:focus,
+        select:focus {
+            border: 1px solid #0074D9;
+            outline: none;
+        }
+         
+        select {
+            width: 88% !important;
+        }
+         
+        button {
+            margin: 20px auto;
+            width: 150px;
+            height: 50px;
+            background-color: #39CCCC;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+         
+        .tip {
+            text-align: center;
+            font-size: 18px;
+            display: none;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <h1>TIP CALCULATOR</h1>
+        <div class="wrapper">
+             
+ 
+ 
+<p>Bill Amount</p>
+ 
+ 
+ 
+            <input type="text"
+                   id="amount"
+                   placeholder="Amount to be paid"> ₹
+ 
+             
+ 
+ 
+<p>How was the service ?</p>
+ 
+ 
+ 
+            <select id="services">
+                <option selected disabled hidden>Select</option>
+                <option value="0.25">25% - Top Notch</option>
+                <option value="0.20">20% - Excellent</option>
+                <option value="0.15">15% - Good</option>
+                <option value="0.10">10% - Bad</option>
+                <option value="0.05">5% - Worst</option>
+            </select>
+ 
+             
+ 
+ 
+<p>Total number of persons</p>
+ 
+ 
+ 
+            <input type="text"
+                   id="persons"
+                   placeholder="Number of people sharing the bill">
+            <button id="calculate">Calculate</button>
+        </div>
+ 
+        <div class="tip">
+             
+ 
+ 
+<p>Tip Amount</p>
+ 
+ 
+ 
+            <span id="total">0</span>₹
+            <span id="each">each</span>
+        </div>
+    </div>
+    <script>
+        //the function called when Calculate button is clicked.
+        window.onload = () =>
+            {
+                /*calling a function calculateTip which
+                 will calculate the tip for the bill.*/
+                document.querySelector('#calculate').onclick =
+                calculateTip;
+            }
+ 
+        function calculateTip() {
+            /*assign values of ID : amount, person and
+            service to variables for further calculations.*/
+            let amount = document.querySelector('#amount').value;
+            let persons = document.querySelector('#persons').value;
+            let service = document.querySelector('#services').value;
+ 
+            console.log(service);
+            /*if statement will work when user
+               presses calculate without entering values. */
+            //so will display an alert box and return.
+            if (amount === '' && service === 'Select') {
+                alert("Please enter valid values");
+                return;
+            }
+ 
+            //now we are checking number of persons
+            if (persons === '1')
+//if there is only one person then we need not to display each.
+                document.querySelector('#each').style.display = 'none';
+            else
+            //if there are more than one person we will display each. 
+                document.querySelector('#each').style.display = 'block';
+ 
+    /*calculating the tip by multiplying total-bill and type of service;
+     then dividing it by number of persons.*/
+            //fixing the total amount upto 2 digits of decimal
+            let total = (amount * service) / persons;
+            total = total.toFixed(2);
+ 
+            //finally displaying the tip value
+            document.querySelector('.tip').style.display = 'block';
+            document.querySelector('#total').innerHTML = total;
+        }
+    </script>
+</body>
+ 
+</html>
