@@ -5,20 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="estiloTip.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="title">
-        <h1>Welcome to Tip Calculator.</h1>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand colorText bold" href="#">Tip Calculator</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active colorText" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link colorText" href="https://github.com/ivansmb11/DesarrolloWeb/tree/main/JavaScript/ProyectoIntersemestral">Repositorio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- TODO LO QUE SE ENCUENTRA DENTRO DEL CUADRO -->
     <div class="contenedor">
-        <form action="">
-            <label for="Total">Total a pagar: $ </label><input id="total" type="number"></label><br>
-            <label for="Percentage">Porcentaje de propina: % </label><input id="propina" type="number"></label><br>
-            <label for="Divide">Personas a pagar: </label><input id="personas" type="number"></label><br>
-            <label for="RoundUp">Redondear: </label><input id="numero1" type="checkbox"></label><br>
-            <input type="button" class="boton" onclick="suma()" value="Calcular!"><br>
-        </form>
+      <form>
+        <div class="row mb-3">
+          <label for="total" class="col-sm-5 col-form-label">Total a pagar: $ </label>
+          <div class="col-sm-7">
+            <input type="number" class="form-control" id="inputTotal">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="propina" class="col-sm-5 col-form-label">Porcentaje de propina: % </label>
+          <div class="col-sm-7">
+            <input type="number" class="form-control" id="inputPropina">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="personas" class="col-sm-5 col-form-label">Personas a pagar: </label>
+          <div class="col-sm-7">
+            <input type="number" class="form-control" id="inputPersonas">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-10 offset-sm-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="checkRound">
+              <label class="form-check-label" for="gridCheck1">
+                Redondear?
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 text-center">
+          <button type="submit" class="btn" onclick="calcular(event)"><i class="bi bi-arrow-right-circle-fill style=" style="font-size: 40px; color: #0275d8;"></i></button><button type="submit" class="btn" onclick="clearBox()"><i class="bi bi-x-circle-fill" style="font-size: 40px; color: #0275d8;"></i></button>
+        </div>
+      </form><br>
+      <div class="retro col-md-15 text-left">
+        <ul class="list-group list-group-flush">
+          <li id="retroTotal" class="list-group-item list-group-item-primary">Total + Propina: </li>
+          <li id="retroPropina" class="list-group-item list-group-item-primary">Propina p/persona: </li>
+        </ul>
+      </div>
     </div>
 </body>
+<script src="logic.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>

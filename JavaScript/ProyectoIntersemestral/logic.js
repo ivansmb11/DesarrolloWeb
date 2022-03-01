@@ -1,43 +1,52 @@
-//the function called when Calculate button is clicked.
-window.onload = () =>
-{
-    /*calling a function calculateTip which
-     will calculate the tip for the bill.*/
-    document.querySelector('#calculate').onclick =
-    calculateTip;
+
+const total = document.getElementById('inputTotal');
+const propina = document.getElementById('inputPropina');
+const personas = document.getElementById('inputPersonas');
+const check = document.getElementById('checkRound');
+const rTotal = document.getElementById('retroTotal');
+const rPropina = document.getElementById('retroPropina');
+
+let temprTotal;
+let per;
+
+const calcular = (event) => {
+
+    if(!total.value || !propina.value || !personas.value) return;
+    if(check.value == true){
+        calcularRound(event);
+        return;
+    }
+    event.preventDefault();
+
+    const floatTotal = parseFloat(total.value);
+
+    per = parseFloat(propina.value / 100);
+    temprTotal = floatTotal + (floatTotal*per);
+    rTotal.innerHTML = 'Total + Propina: $'+temprTotal;
+
+    rPropina.innerHTML = 'Propina p/persona: $'+((floatTotal*per)/personas.value);
 }
 
-function calculateTip() {
-/*assign values of ID : amount, person and
-service to variables for further calculations.*/
-let amount = document.querySelector('#amount').value;
-let persons = document.querySelector('#persons').value;
-let service = document.querySelector('#services').value;
+const clearBox = () => {
 
-console.log(service);
-/*if statement will work when user
-   presses calculate without entering values. */
-//so will display an alert box and return.
-if (amount === '' && service === 'Select') {
-    alert("Please enter valid values");
-    return;
+    total.value= '';
+    propina.value = '';
+    personas.value= '';
+    document.getElementById("checkRound").checked = false;
+
+    rTotal.innerHTML = 'Total + Propina: ';
+    rPropina.innerHTML = 'Propina p/persona: ';
+
 }
 
-//now we are checking number of persons
-if (persons === '1')
-//if there is only one person then we need not to display each.
-    document.querySelector('#each').style.display = 'none';
-else
-//if there are more than one person we will display each. 
-    document.querySelector('#each').style.display = 'block';
+const calcularRound = (event) => {
+    event.preventDefault();
 
-/*calculating the tip by multiplying total-bill and type of service;
-then dividing it by number of persons.*/
-//fixing the total amount upto 2 digits of decimal
-let total = (amount * service) / persons;
-total = total.toFixed(2);
+    const floatTotal = parseFloat(total.value);
 
-//finally displaying the tip value
-document.querySelector('.tip').style.display = 'block';
-document.querySelector('#total').innerHTML = total;
+    per = parseFloat(propina.value / 100);
+    temprTotal = floatTotal + (floatTotal*per);
+    rTotal.innerHTML = 'Total + Propina: $'+math.Round(temprTotal);
+
+    rPropina.innerHTML = 'Propina p/persona: $'+(math.Round((floatTotal*per)/personas.value));
 }
