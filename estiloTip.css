@@ -11,10 +11,10 @@ body {
     background: rgb(255, 255, 255);
 }
 
-.title {
-    margin: 10px;
-    padding: 10px;
+.textS {
+    font-size: 22px;
 }
+
 
 .colorText {
     color: #fff;
@@ -26,6 +26,37 @@ body {
 
 .contenedor {
     width: 450px;
+    height: 580px;
+    background-color: rgba(238, 238, 238, 0.753);
+    border-radius: 20px;
+    padding : 30px;
+    margin: 90px;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.tamaño {
+    width : 30%;
+    display:block;
+    margin:auto;
+}
+
+.footerIvan h5 {
+    color: #fff;
+    font-weight: bolder;
+}
+
+.footerIvan {
+    color: #fff;
+    text-align: center;
+}
+/* .contenedor {
+    width: 450px;
     height: 500px;
     background-color: rgba(238, 238, 238, 0.753);
     position: absolute;
@@ -34,4 +65,4 @@ body {
     transform: translateX(-50%) translateY(-50%);
     border-radius: 20px;
     padding: 30px;
-}
+} */

@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand colorText bold" href="#">Tip Calculator</a>
+            <img src="faviconTip.png" class="img-fluid" style="width: 50px; padding-right: 10px;" alt="Icono png"><a class="navbar-brand colorText bold" href="">Tip Calculator</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,47 +31,93 @@
         </div>
       </nav>
     <!-- TODO LO QUE SE ENCUENTRA DENTRO DEL CUADRO -->
-    <div class="contenedor">
-      <form>
-        <div class="row mb-3">
-          <label for="total" class="col-sm-5 col-form-label">Total a pagar: $ </label>
-          <div class="col-sm-7">
-            <input type="number" class="form-control" id="inputTotal">
-          </div>
-        </div>
-        <div class="row mb-3">
-          <label for="propina" class="col-sm-5 col-form-label">Porcentaje de propina: % </label>
-          <div class="col-sm-7">
-            <input type="number" class="form-control" id="inputPropina">
-          </div>
-        </div>
-        <div class="row mb-3">
-          <label for="personas" class="col-sm-5 col-form-label">Personas a pagar: </label>
-          <div class="col-sm-7">
-            <input type="number" class="form-control" id="inputPersonas">
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col-sm-10 offset-sm-2">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="checkRound">
-              <label class="form-check-label" for="gridCheck1">
-                Redondear?
-              </label>
+    <div class="container textS">
+      <div class="row">
+        <div class="contenedor col center">
+          <div class="d-flex flex-column">
+            <form>
+              <div class="row mb-3 p-2">
+                <label for="total" class="col-sm-5 col-form-label">Total a pagar: $ </label>
+                <div class="col-sm-7">
+                  <input type="number" class="form-control" id="inputTotal">
+                </div>
+              </div>
+              <div class="row mb-3 p-2">
+                <label for="propina" class="col-sm-5 col-form-label">Porcentaje de propina: % </label>
+                <div class="col-sm-7">
+                  <input type="number" class="form-control" id="inputPropina">
+                </div>
+              </div>
+              <div class="row mb-3 p-2">
+                <label for="personas" class="col-sm-5 col-form-label">Personas a pagar: </label>
+                <div class="col-sm-7">
+                  <input type="number" class="form-control" id="inputPersonas">
+                </div>
+              </div>
+              <div class="row mb-3 p-2">
+                <div class="col-sm-10 offset-sm-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="checkRound">
+                    <label class="form-check-label" for="gridCheck1">
+                      Redondear?
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 text-center p-2">
+                <button type="submit" class="btn" onclick="calcular(event)"><i class="bi bi-arrow-right-circle-fill style=" style="font-size: 50px; color: #0275d8;"></i></button><button type="submit" class="btn" onclick="clearBox()"><i class="bi bi-x-circle-fill" style="font-size: 50px; color: #0275d8;"></i></button>
+              </div>
+            </form>
+            <div class="retro col-md-15 text-left p-2">
+              <ul class="list-group list-group-flush">
+                <li id="retroTotal" class="list-group-item list-group-item-primary">Total + Propina: </li>
+                <li id="retroPropina" class="list-group-item list-group-item-primary">Propina p/persona: </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-12 text-center">
-          <button type="submit" class="btn" onclick="calcular(event)"><i class="bi bi-arrow-right-circle-fill style=" style="font-size: 40px; color: #0275d8;"></i></button><button type="submit" class="btn" onclick="clearBox()"><i class="bi bi-x-circle-fill" style="font-size: 40px; color: #0275d8;"></i></button>
+        <div class="col center">
+          <img src="faviconTip.png" alt="">
         </div>
-      </form><br>
-      <div class="retro col-md-15 text-left">
-        <ul class="list-group list-group-flush">
-          <li id="retroTotal" class="list-group-item list-group-item-primary">Total + Propina: </li>
-          <li id="retroPropina" class="list-group-item list-group-item-primary">Propina p/persona: </li>
-        </ul>
       </div>
     </div>
+    <footer class="bg-primary text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0 footerIvan">
+            <img src="ivan.png" class="rounded-circle tamaño" alt="">
+            <p><h5 class="text-uppercase text-center">Iván S. Mendoza <a href="https://github.com/ivansmb11"><i class="bi bi-github" style="color: white;"></i></a></h5><br>
+              Originario de Culiacán Sinaloa. Le apasiona el desarrollo de software y el
+              aprender algo nuevo cada día. Frontend developer de este proyecto.
+            </p>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0 footerIvan">
+            <img src="gabo.png" class="rounded-circle tamaño" alt="">
+            <p><h5 class="text-uppercase text-center">Gabriel E. Márquez <a href="https://github.com/ivansmb11"><i class="bi bi-github" style="color: white;"></i></a></h5><br>
+              Originario de Venezuela. A Gabriel le gusta la música los videojuegos y
+              tener nuevas experiencias. Desarrolló las funciones de JavaScript para
+              este proyecto.
+            </p>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(148, 148, 148, 0.226); color: #fff; font-weight: 500;">
+        Desarrollado en: 
+        <a style="color: #fff; font-weight: 500;" href="https://www.anahuac.mx/queretaro/">Universidad Anáhuac Querétaro - 2022.</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 </body>
 <script src="logic.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
