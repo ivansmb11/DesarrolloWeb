@@ -12,7 +12,7 @@ let per;
 const calcular = (event) => {
 
     if(!total.value || !propina.value || !personas.value) return;
-    if(check.value == true){
+    if(check.checked == true){
         calcularRound(event);
         return;
     }
@@ -46,7 +46,7 @@ const calcularRound = (event) => {
 
     per = parseFloat(propina.value / 100);
     temprTotal = floatTotal + (floatTotal*per);
-    rTotal.innerHTML = 'Total + Propina: $'+math.Round(temprTotal);
+    rTotal.innerHTML = 'Total + Propina: $'+Math.round(temprTotal);
 
-    rPropina.innerHTML = 'Propina p/persona: $'+(math.Round((floatTotal*per)/personas.value));
+    rPropina.innerHTML = 'Propina p/persona: $'+(Math.round((floatTotal*per)/personas.value));
 }
