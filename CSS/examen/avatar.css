@@ -1,0 +1,10 @@
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: solid 2px gray;
+}
+
+/* label {
+    font-size: 30px;
+} */
