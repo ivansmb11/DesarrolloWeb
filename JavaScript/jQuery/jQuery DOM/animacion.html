@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .caja {
+            width: 150px;
+            height: 150px;
+            background: green;
+        }
+        @keyframes colores {
+            from{background: #F2F5A9;}
+            to{background: #FA8258;}
+        }
+
+        .animacion{
+            animation: colores 3s ease;
+        }
+    </style>
+    <title>Animaciones en jQuery</title>
+</head>
+<body>
+    <button id="boton">Ejecutar</button>
+    <button id="desactivar">Desactivar</button>
+
+    <div class="caja" id="caja">Esta es la Caja</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="animacion.js"></script>
+    
+</body>
+</html>

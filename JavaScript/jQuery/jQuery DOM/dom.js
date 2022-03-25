@@ -44,8 +44,28 @@
 // 	});
 // });
 
-$(document).ready(function(){
-    $('.caja').first().css({
-            background: '#f9a03f'
-        });
+// $(document).ready(function(){
+//     $('.caja').first().css({
+//             background: '#f9a03f'
+//         });
+//  });
+
+//  $(document).ready(function(){
+//     $('.caja').last().css({
+//             background: '#f9a03f'
+//         });
+//  });
+
+//  $(document).ready(function(){
+//     $('.caja').eq(3).css({
+//         background: '#f9a03f'
+//     });
+//  });
+
+//  $(document).ready(function(){
+//     $('.caja').filter('#tercera').css({background: '#9A2EFE'});
+//  });
+
+ $(document).ready(function(){
+    $('.caja').not('#tercera').css({background: '#9A2EFE'});
  });
