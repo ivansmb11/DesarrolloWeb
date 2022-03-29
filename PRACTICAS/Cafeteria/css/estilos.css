@@ -1,3 +1,72 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'JetBrains Mono';
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    background: url('../img/bg.jpg'), #b4f6ff;
+    background-attachment: fixed;
+    background-position: center 0;
+}
+
+header .contenedor {
+    position: relative;
+    height: 700px;
+}
+
+header .menu {
+    width: 100%;
+    text-align: right;
+}
+
+header .menu a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 40px 20px;
+    text-decoration: none;
+    position: relative; /* Paralax needs */
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+}
+
+header .textos {
+    width: 100%;
+    color: #fff;
+    position: absolute; /* Paralax needs */
+    top: 50%;
+    margin-top: -50px;
+    text-shadow: 2px 2px #000000;
+}
+
+header .textos .nombre {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+header .textos .nombre span {
+    font-weight: 100;
+}
+
+header .textos h3 {
+    font-size: 25px;
+    font-weight: 100;
+    font-style: italic;
 }
