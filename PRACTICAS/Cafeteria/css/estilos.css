@@ -104,7 +104,78 @@ header .textos h3 {
     width: 60%;
     position: relative;
     float: right;
-    top: 150px;
+    top: 250px;
     z-index: 1;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.65);
+}
+
+.main .acerca-de article h3 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.main .menu {
+    padding-top: 570px;
+    margin-bottom: 50px;
+}
+
+.main .menu .contenedor .titulo {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main .menu .contenedor .contenedor-menu {
+    border: 1px solid #000000;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.main .menu .contenedor .contenedor-menu2 {
+    border: 1px solid #000000;
+    background: transparent;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.main .menu article {
+    width: 50%;
+    float: left;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.main .menu article .categoria {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.main .menu article .platillo {
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px dotted #000000;
+}
+
+.main .menu article .platillo .nombre {
+    font-size: 18px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.main .menu article .platillo .precio {
+    font-size: 18px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+.main .menu article .platillo .descripcion {
+    font-size: 13px;
+    margin-bottom: 15px;
+    clear: both;
 }
