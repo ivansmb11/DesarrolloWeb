@@ -225,3 +225,105 @@ header .textos h3 {
     float: left;
     text-align: right;
 }
+
+.main .mapa {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .mapa iframe {
+    width: 100%;
+    max-height: 600px;
+}
+
+/* ------FOOTER----- */
+
+footer {
+    background: #000;
+}
+
+footer .copyright {
+    text-align: center;
+    padding: center;
+    color: #fff;
+}
+
+@media screen  and (max-width: 800px) {
+    header .contenedor {
+        height: auto;
+        position: static;
+    }
+    
+    header .textos {
+        position: static;
+        margin: 100px 0;
+    }
+
+    header .menu {
+        text-align: center;
+    }
+
+    header .menu a {
+        margin: 10px 20px;
+    }
+
+    header .textos .nombre {
+        font-size: 30px;
+    }
+
+    header .textos h3 {
+        font-size: 18px;
+    }
+
+    .main .acerca-de .foto {
+        position: relative;
+        width: 100%;
+    }
+
+    .main .acerca-de article {
+        width: 100%;
+        position: relative;
+        top: -50px;
+        transform: translate(0px, 0);
+    }
+
+    .main .menu {
+        padding-top: 300px;
+    }
+
+    .main .menu article {
+        width: 100%;
+    }
+
+    .main .galeria .foto {
+        width: 50%;
+    }
+
+    .main .mapa {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main .acerca-de article h3 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    .main .menu article .nombre,
+    .main .menu article .precio {
+        font-size: 16px;
+    }
+
+    .main .ubicacion .direccion,
+    .main .ubicacion .horarios {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main .ubicacion .direccion {
+        margin-bottom: 20px;
+    }
+    
+}
