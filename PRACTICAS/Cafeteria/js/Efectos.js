@@ -25,10 +25,9 @@ $(document).ready(function(){
     }
 
     // Scroll Elemento menu
-    let acercaDe = $('#acerca-de').offset().top,
-    menu = $('#platillos').offset().top,
-    galeria = $('#galeria').offset().top,
-    ubicacion = $('#ubicacion').offset().top;
+    let menu = $('.main .menu').offset().top,
+    galeria = $('.galeria').offset().top,
+    ubicacion = $('.mapa').offset().top;
     
     //Boton "Acerca de"
     $('#btn-acerca-de').on('click', function(e){
@@ -42,7 +41,7 @@ $(document).ready(function(){
     $('#btn-menu').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: menu - 40
+            scrollTop: menu + 400
         });
     });
 
@@ -50,7 +49,7 @@ $(document).ready(function(){
     $('#btn-galeria').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: galeria - 40
+            scrollTop: galeria - 90
         });
     });
 
