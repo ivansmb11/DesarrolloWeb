@@ -7,11 +7,11 @@ $(document).ready(function(){
             let scroll = $(this).scrollTop();
 
             $('header .textos').css({
-                'transform': 'translate(0px, ' + scroll / 2 + '%)'
+                'transform': 'translate(0px, ' + scroll / 3 + '%)'
             });
 
             $('.acerca-de article').css({
-                'transform': 'translate(0px, -' + scroll / 15 + '%)'
+                'transform': 'translate(0px, -' + scroll / 4.5 + '%)'
             });
         }
     });
