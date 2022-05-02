@@ -1,5 +1,4 @@
 const { Users } = require('./User');
-
 const User = {
   get: async(req, res) => {
     const { id } = req.params;

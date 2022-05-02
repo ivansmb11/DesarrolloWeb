@@ -1,17 +1,13 @@
+const mongoose = require('mongoose');
 const express = require('express');
-const mongoose = require ('mongoose');
 const app = express();
 app.use(express.json());
-const port = 3000;
 
-mongoose.connect('mongodb+srv://loki:3969@cluster0.are1p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://admin:admin@cluster0.qvcta.mongodb.net/test?retryWrites=true&w=majority');
 
-const user = require('./user.controller');
+const user = require('./userController');
 const res = require('express/lib/response');
-
-
-// u: loki
-// p: 3969
+const port = 3001;
 
 app.get('/users/', user.list);
 app.post('/users/', user.create);
@@ -23,14 +19,14 @@ app.delete('/users/:id', user.delete);
 app.use(express.static('app'));
 
 app.get('/', (req, res) => {
-    console.log(__dirname);
-    res.sendFile(`${__dirname}/index.html`);
+  console.log( __dirname )
+  res.sendFile(`${ __dirname }/index.html`)
 });
 
 app.get('*', (req, res) => {
-    res.status(404).send('Esta página no existe: 404');
+  res.status(404).send('404 not found');
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${ port }`);
 });
