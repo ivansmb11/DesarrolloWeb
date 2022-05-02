@@ -1,7 +1,11 @@
 const express = require('express');
+const mongoose = require ('mongoose');
 const user = require('./user.controller');
 const app = express();
 const port = 3000;
+
+mongoose.connect('mongodb+srv://loki:3969@cluster0.are1p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+app.use(express.json());
 
 // u: loki
 // p: 3969
