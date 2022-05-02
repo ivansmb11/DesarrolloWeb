@@ -1,56 +1,42 @@
-const mongoose = require('mongoose');
-
-mongoose.connect('mongodb+srv://loki:3969@cluster0.are1p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
-
 const User = mongoose.model('User', {
-    username: String,
-    edad: Number,
+  username: String,
+  age: Number
 });
 
-const crear = async () => {
-    const user = new User({username: 'Juan Perez', edad: 30});
-    const savedUser = await user.save();
-    // console.log(savedUser);
+const create = async() => {
+    const User = new User({ username: 'John', age: 18 });
+    const result = await user.save();
+    console.log(result);
 }
 
-// crear();
-
-const buscarTodo = async () => {
-    const users = await User.find();
-    console.log(users);
+const findAll = async() => {
+    const result = await User.find();
+    console.log(result);
 }
 
-buscarTodo();
+const search = async() => {
+    const result = await User.find({ username: 'John' });
+    console.log(result);
+}
 
-const buscar = async () => {
-    const user = await User.find({username: 'Juan Mendoza'});
+const searchOne = async() => {
+    const result = await User.findOne({ username: 'username' });
+    console.log(result);
+}
+
+const update = async() => {
+    const user = await User.findOne({ username: 'John' });
     console.log(user);
-}
-
-// buscar();
-
-const buscarUno = async () => {
-    const user = await User.findOne({username: 'Juan Perez'});
-    console.log(user);
-}
-
-// buscarUno();
-
-const actualizar = async () => {
-    const user = await User.findOne({username: 'Ivan Mendoza'});
-    console.log(user);
-    user.edad = 22;
+    user.age = 30;
     await user.save();
 }
 
-// actualizar();
-
-const eliminar = async () => {
-    const user = await User.findOne({username: 'Juan Perez'});
+const remove = async() => {
+    user = await User.findOne({ username: 'John' })
     console.log(user);
     if (user) {
-        await user.remove();
+        user.remove();
     }
 }
 
-eliminar();
+update();
