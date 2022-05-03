@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://admin:admin@cluster0.qvcta.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://loki:3969@cluster0.are1p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
 const user = require('./userController');
 const res = require('express/lib/response');
